@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--status bar color is primary color !-->
+    <color name="colorPrimary">#eceff1</color>
+    <color name="colorPrimaryDark">#5b5757</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="blue">#15A0FF</color>
+
+
+</resources>

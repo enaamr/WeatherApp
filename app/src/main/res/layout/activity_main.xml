@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraint"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/morning"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:textSize="@dimen/text_size"
+        android:textColor="@android:color/white"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:drawableStart="@drawable/ic_humidity"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/wind"
+        app:layout_constraintStart_toStartOf="parent"
+      />
+    <TextView
+        android:id="@+id/wind"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:textSize="@dimen/text_size"
+        android:textColor="@android:color/white"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:drawableStart="@drawable/ic_wind"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/humidity"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/country"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="serif"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/temp_text_size" />
+
+
+        <TextView
+            android:id="@+id/deg"
+            android:layout_margin="@dimen/margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/temperature"
+            android:fontFamily="serif"
+            android:text="°c"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size" />
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/country"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:textSize="@dimen/text_size"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout"
+        app:layout_constraintBottom_toTopOf="@+id/sunrise"
+        />
+    <TextView
+        android:id="@+id/weather_condition"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:textSize="@dimen/text_size"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/country"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       />
+    <TextView
+        android:id="@+id/last_update"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:textSize="@dimen/text_size"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/country"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/sunrise"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:textSize="@dimen/text_size"
+        android:textColor="@android:color/white"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:drawableTop="@drawable/sunrise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sunset"
+        app:layout_constraintTop_toBottomOf="@id/weather_condition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/sunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:layout_marginStart="8dp"
+        android:drawableTop="@drawable/sunset"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:fontFamily="serif"
+        android:padding="@dimen/margin"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sunrise"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather_condition" />
+
+</android.support.constraint.ConstraintLayout>
